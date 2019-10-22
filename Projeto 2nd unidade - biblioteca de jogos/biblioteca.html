@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous">
+        </script>
+        <script src="biblioteca.js"></script>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="biblioteca.css">
+    </head>
+    <body class="bg-dark text-light">
+        <!--formulário-->
+        <div class="row">
+            <div class="col-md-4 col-xs-8"></div>
+            <div class="col-md-4">
+            <form class="bg-dark text-light" id="formulario">
+       
+            <!--input nome-->
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input id="input_nome" type="email" class="form-control bg-dark text-secondary" aria-describedby="emailHelp" placeholder="Nome do jogo" >
+                    </div>
+                </div>
+            </div>
+            <!--input gênero-->
+            <div class="row">
+                <div class="col-12"> 
+                    <div class="form-group">
+                        <label>Gênero</label>
+                        <input id="input_genero" type="text" class="form-control bg-dark text-secondary" placeholder="Gênero do jogo">
+                    </div>
+                </div>
+            </div>
+            <!--input plataforma-->
+            <div class="row">
+                <div class="col-12"> 
+                    <label>Plataforma</label>
+                    <select id="input_plataforma" class="form-control bg-dark text-secondary" >
+                        <option value="PC">PC</option>
+                        <option value="Console">Console</option>
+                        <option value="Mobile">Mobile(celular)</option>
+                        <option value="Tabuleiro">Tabuleiro</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+            </div>
+            <!--input se já jogou-->
+            <div class="row">
+                <div class="col-12"> 
+                    <div class="radio">
+                        <br>
+                        <label id="first_input"><input type="radio" name="radio_jajogou" value="1"  checked>Já jogou</label>
+                        <label><input type="radio" name="radio_jajogou" value="0">Não jogou</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <!--botão para add jogo-->
+                    <button type="button" class="btn btn-primary btn-block" id="botao_addjogo">Adicionar jogo</button>
+                </div>
+            </div>
+            </form>
+        </div>
+            <div class="col-md-4"></div>
+        </div>
+        <!--seleção de critério(gênero)-->
+        <div class="row ">
+            <div class="col-1"></div>
+            <div class="col-3">
+                <select class="form-control" id="selecao_plataforma">
+                    <optgroup label="Plataforma">
+                        <option value="Todas">Todas</option>
+                        <option value="PC">PC</option>
+                        <option value="Console">Console</option>
+                        <option value="Mobile">Mobile</option>
+                        <option value="Tabuleiro">Tabuleiro</option>
+                        <option value="Outro">Outro</option>
+
+                    </optgroup>
+                </select>   
+            </div>
+            <div class="col-2">
+                <!--botão para gerar tabela-->
+                <button type="button" id="botao_gerartabela" class="btn btn-primary btn-block">Gerar tabela</button>
+            </div>
+            
+        </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="table-responsive table-secondary">
+                        <table class="table" id="tabela">
+                            <!--TODO: criar uma nova  tabela ta apagando a thead-->
+                            <tr class="text-dark">
+                                <th>Nome</th>
+                                <th>Plataforma</th>
+                                <th>Gênero</th>
+                                <th>Data de compra</th>
+                                <th>Já jogado</th>
+                                <th>Deletar</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+       
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>        
+    </body>
+</html>
